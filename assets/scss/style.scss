@@ -1,8 +1,8 @@
-@import "libs/button";
-@import "libs/header";
-@import "libs/footer";
 @import "libs/fonts";
 @import "libs/fontello";
+@import "libs/header";
+@import "libs/footer";
+@import 'libs/request-call';
 @import 'libs/normalize';
 
 body {
@@ -22,9 +22,10 @@ html {
 * {
     margin: 0;
     padding: 0;
-    list-style: none;
     outline: none;
+    list-style: none;
     text-decoration: none;
+    font-family: 'Roboto', sans-serif;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -64,6 +65,10 @@ input[type="submit"] {
     appearance: none;
 }
 
+.wrapper{
+    overflow: hidden;
+}
+
 input:not([type=checkbox]):not([type=radio]),
 textarea, 
 select {
@@ -97,9 +102,10 @@ a {
 }
 
 .container {
+    z-index: 4;
     width: 100%;
-    padding: 0 15px;
     margin: 0 auto;
+    padding: 0 20px;
     position: relative;
 
 }
