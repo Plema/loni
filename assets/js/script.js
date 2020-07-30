@@ -6,6 +6,12 @@ $(document).ready(function(){
         'padding-bottom': footer_height
     });
 
+    var header_height = $('.header').height();
+
+    $('body').css({
+        'padding-top': header_height
+    });
+
     $('.open-menu').on('click', function(){
         $('.mobile-menu').addClass('active');
     });
@@ -22,6 +28,12 @@ $(window).resize(function(){
 
     $('body').css({
         'padding-bottom': footer_height
+    });
+
+    var header_height = $('.header').height();
+
+    $('body').css({
+        'padding-top': header_height
     });
 
 });

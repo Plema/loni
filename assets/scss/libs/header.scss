@@ -3,7 +3,7 @@
     left: 0;
     z-index: 9;
     width: 100%;
-    position: absolute;
+    position: fixed;
     background: #FFFFFF;
     padding: 50px 10px 30px;
     transform: translate(0, -120%);
@@ -80,14 +80,15 @@
     left: 0;
     z-index: 6;
     width: 100%;
-    position: absolute;
+    position: fixed;
+    background-color: #727176;
     .header-content{
-        padding: 19px 0;
         position: relative;
+        padding: 19px 0 12px;
         .logo{
             width: 226px;
             display: table;
-            margin: 0 auto;
+            margin: 0 auto 38px;
             transform: translate(2px, 0px);
             a{
                 width: 100%;
@@ -97,11 +98,48 @@
         nav{
             display: none;
         }
+        .social{
+            display: flex;
+            align-items: center;
+            li{
+                margin: 0 6px;
+                &:first-child{
+                    margin-left: 0;
+                }
+                &:last-child{
+                    margin-right: 0;
+                }
+                a{
+                    width: 26px;
+                    height: 26px;
+                    position: relative;
+                    border-radius: 50%;
+                    display: inline-block;
+                    border: 1px solid #ffffff;
+                    transition: all 0.3s;
+                    &:hover{
+                        background: #ffffff;
+                        i{
+                            color: #f30f0f;
+                        }
+                    }
+                    i{
+                        top: 50%;
+                        left: 50%;
+                        font-size: 14px;
+                        color: #ffffff;
+                        position: absolute;
+                        transform: translate(-50%, -50%);
+                        transition: all 0.3s;
+                    }
+                }
+            }
+        }
         .open-menu{
             right: 0;
             width: 24px;
             height: 18px;
-            bottom: -40px;
+            bottom: 24px;
             position: absolute;
             &::after{
                 content: '';
@@ -134,9 +172,13 @@
         @media (min-width: 768px) {
             display: flex;
             align-items: center;
+            justify-content: space-between;
             .logo{
                 margin: 0;
                 transform: translate(0, 0);
+            }
+            .social{
+                margin-right: 70px;
             }
             .open-menu {
                 bottom: 29px;
@@ -144,6 +186,7 @@
         }
         @media (min-width: 1024px){
             padding: 24px 0;
+            justify-content: flex-start;
             nav{
                 display: block;
                 margin-left: 50px;
@@ -192,12 +235,15 @@
                     }
                 }
             }
+            .social{
+                display: none;
+            }
             .open-menu{
                 display: none;
             }
         }
         @media (min-width: 1280px){
-            padding: 30px 0;
+            padding: 30px 0 24px;
             nav{
                 margin-left: 90px;
                 ul{
@@ -208,7 +254,7 @@
             }
         }
         @media (min-width: 1400px){
-            padding: 42px 0;
+            padding: 42px 0 27px;
             nav {
                 transform: translate(0, -3px);
                 ul {

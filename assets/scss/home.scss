@@ -2,7 +2,7 @@
 
 .banner{
     position: relative;
-    padding: 97px 0 40px;
+    padding: 14px 0 40px;
     &::after{
         content: '';
         top: 0;
@@ -14,7 +14,7 @@
         background-color: #727176; 
     }
     .social{
-        display: flex;
+        display: none;
         align-items: center;
         li{
             margin: 0 6px;
@@ -51,7 +51,7 @@
         }
     }
     .banner-text{
-        margin: 37px 0 56px;
+        margin: 10px 0 56px;
         h1{
             color: #ffffff;
             font-size: 30px;
@@ -222,6 +222,7 @@
         }
     }
     @media (min-width: 768px){
+        padding: 60px 0 40px;
         .banner-text {
             display: flex;
             align-items: flex-start;
@@ -239,7 +240,7 @@
         }
     }
     @media (min-width: 1024px){
-        padding: 120px 0 80px;
+        padding: 60px 0 80px;
         .banner-content{
             position: relative;
         }
@@ -307,7 +308,7 @@
         }
     }
     @media (min-width: 1280px){
-        padding: 150px 0 80px;
+        padding: 80px 0 80px;
         &::after{
             height: 52%;
         }
@@ -360,9 +361,9 @@
         }
     }
     @media (min-width: 1400px){
-        padding: 170px 0 80px;
+        padding: 60px 0 80px;
         &::after {
-            height: 60%;
+            height: 55%;
         }
         .social {
             top: 10px;
@@ -1347,9 +1348,6 @@
         border: 1px solid #e7e7f0;
         padding: 79px 20px 25px 20px;
         transition: all 0.3s;
-        &:hover{
-            box-shadow: 0 4px 10px #e1e1ee;
-        }
         &:last-child{
             margin-bottom: 0;
         }
