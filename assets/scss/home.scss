@@ -1330,8 +1330,8 @@
     }
 }
 
-.stasias{
-    padding: 39px 0 28px;
+.news{
+    padding: 48px 0 28px;
     h2{
         color: #2c2a31;
         font-size: 25px;
@@ -1341,12 +1341,11 @@
         text-align: center;
         margin-bottom: 47px;
     }
-    .stasias-item{
+    .news-item{
         position: relative;
         margin-bottom: 17px;
         background-color: #ffffff;
-        border: 1px solid #e7e7f0;
-        padding: 79px 20px 25px 20px;
+        padding: 70px 35px 26px 17px;
         transition: all 0.3s;
         &:last-child{
             margin-bottom: 0;
@@ -1360,36 +1359,22 @@
             line-height: 18px;
             position: absolute;
             display: inline-block;
-            padding: 6px 14px 5px 23px;
+            padding: 6px 19px 5px 18px;
             background-color: #f4f4fa;
         }
         h5{
             color: #2c2a31;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 500;
-            line-height: 18px;
-            margin-bottom: 6px;
+            line-height: 21px;
+            margin-bottom: 15px;
         }
         p{
             color: #2c2a31;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 400;
-            line-height: 19px;
-            margin-bottom: 13px;
-        }
-        strong{
-            display: block;
-            color: #2c2a31;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 20px;
-            margin-bottom: 23px;
-            padding-right: 20px;
-            b{
-                font-size: 16px;
-                font-weight: 700;
-                line-height: 20px;
-            }
+            line-height: 21px;
+            margin-bottom: 20px;
         }
         a{
             color: #122661;
@@ -1429,13 +1414,13 @@
             text-align: left;
             line-height: 34px;
         }
-        .stasias-content{
+        .news-content{
             margin: 0 -1%;
             display: flex;
             flex-wrap: wrap;
             align-items: flex-start;
         }
-        .stasias-item{
+        .news-item{
             width: 31.33%;
             margin: 0 1% 10px;
             padding: 74px 12px 29px 16px;
@@ -1453,7 +1438,7 @@
             font-size: 36px;
             line-height: 40px;
         }
-        .stasias-item {
+        .news-item {
             padding: 77px 24px 28px;
             time {
                 top: 24px;
@@ -1469,13 +1454,6 @@
                 line-height: 21px;
                 margin-bottom: 24px;
             }
-            strong {
-                font-size: 18px;
-                line-height: 21px;
-                b {
-                    font-size: 18px;
-                }
-            }
             a {
                 font-size: 18px;
                 line-height: 20px;
@@ -1488,23 +1466,24 @@
     }
 }
 
-.news{
+.stasias{
     position: relative;
-    padding: 22px 0 88px;
+    padding: 22px 0 29px;
     &::after{
         content: '';
         bottom: 0;
         left: 0;
         z-index: 0;
         width: 100%;
-        height: 141%;
+        height: 194%;
         position: absolute;
         background-color: #727176;
     }
-    .news-slider{
+    .stasias-slider{
         left: 50%;
         width: 860px;
         position: relative;
+        padding-bottom: 70px;
         transform: translate(-50%, 0);
         .slick-list{
             margin: 0 -5px;
@@ -1515,11 +1494,38 @@
                 display: flex;
             }
         }
-        .news-item{
+        .slick-arrow {
+            left: 50%;
+            z-index: 4;
+            bottom: 3px;
+            width: 44px;
+            height: 34px;
+            position: absolute;
+            background: transparent;
+            border: 2px solid transparent;
+            transform: translate(-50%, 0);
+            transition: all 0.3s;
+            i{
+                top: 50%;
+                left: 50%;
+                font-size: 18px;
+                color: #ffffff;
+                position: absolute;
+                transform: translate(-50%, -50%);
+                transition: all 0.3s;
+            }
+        }
+        .next{
+            transform: translate(23%,0);
+        }
+        .prev{
+            transform: translate(-123%,0);
+        }
+        .stasias-item{
             position: relative;
             .img{
                 z-index: 0;
-                height: 177px;
+                height: 334px;
                 position: relative;
                 &::after{
                     content: '';
@@ -1536,9 +1542,9 @@
                 left: 0;
                 bottom: 0;
                 z-index: 1;
-                width: 170px;
+                width: 210px;
                 position: absolute;
-                padding: 9px 10px 9px 16px;
+                padding: 20px 15px 25px 20px;
                 h4{
                     color: #ffffff;
                     font-size: 16px;
@@ -1550,7 +1556,13 @@
         }
     }
     @media (min-width: 768px) {
-        
+        .stasias-slider {
+            .stasias-item {
+                .img {
+                    height: 234px;
+                }
+            }
+        }
     }
     @media (min-width: 1024px){
         padding: 40px 0;
@@ -1558,8 +1570,9 @@
             bottom: 47%;
             height: 115%;
         }
-        .news-slider {
+        .stasias-slider {
             left: 0;
+            padding: 0;
             width: auto;
             position: relative;
             transform: translate(0, 0);
@@ -1588,9 +1601,12 @@
             }
             .prev {
                 left: 0;
+                transform: translate(0,0);
             }
             .next {
                 right: 0;
+                left: initial;
+                transform: translate(0,0);
             }
             .slick-list {
                 left: 50%;
@@ -1605,7 +1621,7 @@
         }
     }
     @media (min-width: 1280px){
-        .news-slider {
+        .stasias-slider {
             .slick-list {
                 width: 1620px;
             }
@@ -1616,11 +1632,11 @@
             bottom: 52%;
             height: 102%;
         }
-        .news-slider {
+        .stasias-slider {
             .slick-list {
                 width: 1860px;
             }
-            .news-item {
+            .stasias-item {
                 .img {
                     height: 207px;
                 }

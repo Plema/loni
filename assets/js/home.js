@@ -77,7 +77,7 @@ $(document).ready(function(){
       ]
     });
 
-    $('.news-slider').slick({
+    $('.stasias-slider').slick({
       slidesToShow: 6,
       slidesToScroll: 1,
       nextArrow: '<button class="slick-arrow next"><i class="icon-arrow-right"></i></button>',
@@ -104,7 +104,6 @@ $(document).ready(function(){
         {
           breakpoint: 768,
           settings: {
-            arrows: false,
             slidesToShow: 3,
             slidesToScroll: 1
           }
