@@ -9,6 +9,11 @@
         width: 205px;
         margin: 0 auto;
         padding: 36px 0;
+        .logo-footer{
+            width: 217px;
+            display: none;
+            margin: 0 auto 20px;
+        }
         nav{
             margin: 0 auto 30px;
             padding-left: 10px;
@@ -89,6 +94,10 @@
     @media (min-width: 768px){
         .footer-content {
             width: 100%;
+            .logo-footer{
+                display: table;
+                margin-bottom: 35px;
+            }
             nav {
                 margin: 0 auto 30px;
                 ul{
@@ -112,11 +121,20 @@
     @media (min-width: 1280px){
         .footer-content {
             display: flex;
+            position: relative;
             align-items: center;
             justify-content: space-between;
+            .logo-footer{
+                left: 0;
+                top: 54%;
+                z-index: 2;
+                margin-bottom: 0;
+                position: absolute;
+                transform: translate(0, -50%);
+            }
             nav{
-                margin: 0;
                 display: flex;
+                margin: 0 0 0 255px;
                 align-items: center;
                 justify-content: flex-start;
             }
@@ -126,7 +144,7 @@
         .footer-content {
             padding: 70px 0 60px;
             nav {
-                padding-left: 105px;
+                padding-left: 40px;
                 ul {
                     li {
                         margin: 0 35px;
